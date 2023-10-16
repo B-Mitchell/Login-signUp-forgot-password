@@ -12,7 +12,7 @@ const ForgotPassword = () => {
     const [ oldPassword , setOldPassword ] = useState("");
     const handlePasswordReset = (e) => {
       e.preventDefault();
-      if (oldPassword != userPassword) {
+      if (oldPassword != userPassword || oldPassword === "") {
         alert("passwords do not match!")
       } else {
         console.log(newPassword);
